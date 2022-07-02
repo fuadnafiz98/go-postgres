@@ -24,3 +24,7 @@ tool like django :/
   - the modules that will be used internally throughout the project.
 
 ```
+
+### References
+
+- https://blog.logrocket.com/how-to-build-a-rest-api-with-golang-using-gin-and-gorm/
