@@ -11,8 +11,9 @@ tool like django :/
 ### Project Outline
 
 - [x] Make connection with `postgres`.
-- [ ] Write routes and controller with `gin`.
+- [x] Write routes and controller with `gin`.
 - [ ] Make a websocket server in go.
+  - [ ] learn more about gorilla websocket
 
 ### File structure
 
@@ -28,3 +29,5 @@ tool like django :/
 ### References
 
 - https://blog.logrocket.com/how-to-build-a-rest-api-with-golang-using-gin-and-gorm/
+- [Websocket](https://github.com/gorilla/websocket)
+- [Simple Websocket](http://arlimus.github.io/articles/gin.and.gorilla/)
