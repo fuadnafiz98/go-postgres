@@ -1,4 +1,4 @@
-# Connecting Postgres with Golang
+# Golang X PostgreSql
 
 ## Database Migration options
 
@@ -12,7 +12,7 @@ tool like django :/
 
 - [x] Make connection with `postgres`.
 - [x] Write routes and controller with `gin`.
-- [ ] Make a websocket server in go.
+- [x] Make a websocket server in go.
   - [ ] learn more about gorilla websocket
 
 ### File structure
@@ -31,3 +31,4 @@ tool like django :/
 - https://blog.logrocket.com/how-to-build-a-rest-api-with-golang-using-gin-and-gorm/
 - [Websocket](https://github.com/gorilla/websocket)
 - [Simple Websocket](http://arlimus.github.io/articles/gin.and.gorilla/)
+- [Deep Dive into Websockets](https://blog.bitsrc.io/deep-dive-into-websockets-e6c4c7622423)
