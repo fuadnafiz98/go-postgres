@@ -1,7 +1,6 @@
 package database
 
 import (
-	models "github.com/fuadnafiz98/go-postgres/internal/database/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -16,7 +15,7 @@ func ConnectDatabase() {
 		panic("Failed to connect to Database!")
 	}
 
-	database.AutoMigrate(&models.Message{})
+	// database.AutoMigrate(&models.Message{})
 
 	DB = database
 }
