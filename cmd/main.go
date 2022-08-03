@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	controllers "github.com/fuadnafiz98/go-postgres/internal/api/controllers"
+	"github.com/fuadnafiz98/go-postgres/internal/api/routers"
 	database "github.com/fuadnafiz98/go-postgres/internal/database"
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
@@ -16,15 +16,15 @@ var upgrader = websocket.Upgrader{
 }
 
 func main() {
-	server := gin.Default()
+	router := gin.Default()
 
 	database.ConnectDatabase()
 
-	server.GET("/", func(c *gin.Context) {
+	router.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"data": "ok"})
 	})
 
-	server.GET("/ws", func(c *gin.Context) {
+	router.GET("/ws", func(c *gin.Context) {
 		upgrader.CheckOrigin = func(r *http.Request) bool { return true }
 
 		ws, err := upgrader.Upgrade(c.Writer, c.Request, nil)
@@ -60,7 +60,8 @@ func main() {
 		}
 	})
 
-	server.GET("/messages", controllers.GetAllMessages)
+	routers.MessageRoutes(router)
+	routers.UserRoutes(router)
 
-	server.Run()
+	router.Run()
 }
